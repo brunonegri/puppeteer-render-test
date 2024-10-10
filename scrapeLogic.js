@@ -1,5 +1,7 @@
 const puppeteer = require("puppeteer");
 require("dotenv").config();
+const uLogin = 'locacao2@friasneto.com.br'
+const uPass = 'Corr&t0r@2024'
 
 const scrapeLogic = async (res) => {
   const browser = await puppeteer.launch({

@@ -4,12 +4,12 @@ const app = express();
 
 const PORT = process.env.PORT || 4000;
 
-app.get("/scrape", (req, res) => {
+app.get("/fnbi", (req, res) => {
   scrapeLogic(res);
 });
 
 app.get("/", (req, res) => {
-  res.send("Render Puppeteer server is up and running!");
+  res.send("Frias Neto BI!");
 });
 
 app.listen(PORT, () => {
