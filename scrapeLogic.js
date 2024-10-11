@@ -8,11 +8,7 @@ const scrapeLogic = async (res) => {
     args: [
       "--start-maximized"
     ],
-    headless:false,
-    executablePath:
-      process.env.NODE_ENV === "production"
-        ? process.env.PUPPETEER_EXECUTABLE_PATH
-        : puppeteer.executablePath(),
+    headless:false
   });
   try {
     const page = await browser.newPage();
