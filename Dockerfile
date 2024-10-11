@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 
 COPY package*.json ./
 
-RUN sudo service dbus start
 RUN npm ci
 
 COPY . .
