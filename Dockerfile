@@ -1,4 +1,4 @@
-FROM ghcr.io/puppeteer/puppeteer:19.7.2
+FROM grafana/docker-puppeteer
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/google-chrome-stable
@@ -6,6 +6,8 @@ ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
 WORKDIR /usr/src/app
 
 COPY package*.json ./
+
+RUN sudo service dbus start
 RUN npm ci
 
 COPY . .
