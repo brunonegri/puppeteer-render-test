@@ -6,10 +6,6 @@ const uPass = 'Corr&t0r@2024'
 const scrapeLogic = async (res) => {
   const browser = await puppeteer.launch({
     args: [
-      "--disable-setuid-sandbox",
-      "--no-sandbox",
-      "--single-process",
-      "--no-zygote",
       "--start-maximized"
     ],
     headless:false,
