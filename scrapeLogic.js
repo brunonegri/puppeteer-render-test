@@ -12,6 +12,7 @@ const scrapeLogic = async (res) => {
       "--no-zygote",
       "--start-maximized"
     ],
+    headless:false,
     executablePath:
       process.env.NODE_ENV === "production"
         ? process.env.PUPPETEER_EXECUTABLE_PATH
